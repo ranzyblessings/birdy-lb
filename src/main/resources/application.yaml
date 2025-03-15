@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: birdy-lb
+
+loadbalancer:
+  weighted-round-robin:
+    backend-weight-updater:
+      algorithm: weighted-round-robin-with-decay
+      maxWeight: 100
+      decayInterval: 5
+    scheduler:
+      initial-delay: 2
+      period: 10
